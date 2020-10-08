@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Puzzle</title>
+    <script
+      src="https://kit.fontawesome.com/b2b0e4a39c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div id="main-menu">
+      <div id="title">Memory Puzzle</div>
+      <div id="time-container">
+        <div id="time">
+          <span>Time limit:</span>
+          <span id="time-limit">0</span>
+        </div>
+
+        <input id="time-slider" value="120" min="120" max="3600" type="range" />
+      </div>
+      <button id="game-start">Start Game</button>
+    </div>
+    <div id="game" class="hide">
+      <div id="game-info">
+        <div id="title">Memory Puzzle</div>
+        <div id="score">
+          <span>Moves:</span>
+          <div id="score-number">0</div>
+        </div>
+        <div id="time">
+          <span>Time elapsed:</span>
+          <div id="time-number">0</div>
+        </div>
+      </div>
+      <div id="game-board"></div>
+      <div id="game-hint">
+        <span id="hint-area">Hover for hint!</span>
+      </div>
+    </div>
+    <div id="game-end" class="hide">
+      <div id="end-time">
+        <span>Game ended after:</span>
+        <div id="end-time-number" class="number">0</div>
+      </div>
+      <div id="end-pairs">
+        <span>Pairs found:</span>
+        <div id="end-pairs-number" class="number">0</div>
+      </div>
+      <div id="end-moves">
+        <span>Moves taken:</span>
+        <div id="end-moves-number" class="number">0</div>
+      </div>
+      <button id="game-restart">New Game</button>
+    </div>
+  </body>
+</html>

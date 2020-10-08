@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.no-select {
+  user-select: none;
+}
+
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main-menu #time {
+  display: flex;
+}
+
+#time #time-limit {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+#time-slider {
+  cursor: pointer;
+}
+
+button {
+  background: inherit;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: rgb(200, 200, 200);
+}
+
+#game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#score,
+#time {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+#score span,
+#time span {
+  margin-right: 5px;
+}
+
+#score-number,
+#time-number {
+  font-weight: bold;
+}
+
+#time-limit::after,
+#time-number::after {
+  content: "s";
+  font-weight: lighter;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+}
+
+#game-board .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#game-board .block {
+  font-size: 0;
+  width: 7.5vw;
+  height: 7.5vh;
+  border: 1px solid black;
+  margin: 1px;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 7.5vh;
+  transition: all 0.3s;
+}
+
+#game-board .block:hover {
+  background: rgb(200, 200, 200);
+}
+
+#game-board .block.visible,
+#game-board .block.active {
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+#game-board .block.visible {
+  background: green;
+}
+
+#game-board .block.hinted {
+  font-size: 1.8rem;
+  background: green;
+}
+
+#game-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#game-hint span {
+  margin: 1.5%;
+  padding: 1%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#game-hint span:hover {
+  background: rgb(200, 200, 200);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade-out {
+  opacity: 0.3;
+}
+
+#game-end {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(220, 220, 220);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#game-end .number {
+  font-weight: bold;
+}
+
+#game-end #end-time-number::after {
+  content: "s";
+  font-weight: lighter;
+}
+
+#game-end button {
+  padding: 10px;
+}
